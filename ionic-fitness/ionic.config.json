@@ -1,0 +1,7 @@
+{
+  "name": "ionic-fitness",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
