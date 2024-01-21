@@ -30,11 +30,8 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/runningscreen">
-          <RunningScreen />
-        </Route>
         <Route exact path="/">
-          <Redirect to="/runningscreen" />
+          <RunningScreen />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
