@@ -1,0 +1,30 @@
+.card-content {
+    display: flex;
+    height: 75px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.distance-text {
+    font-size: 30px;
+}
+
+.time-text {
+    font-size: 20px;
+    color: grey;
+}
+
+.card-container {
+    margin: 10px 35px;
+}
+
+.date-text {
+    margin-right: 10px;
+    text-align: right;
+    font-size: 16;
+    font-weight: bold;
+    color: grey;
+}

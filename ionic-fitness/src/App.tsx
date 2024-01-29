@@ -1,7 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import RunningScreen from './pages/RunningScreen';
+import FeedScreen from './pages/FeedScreen';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -27,11 +28,15 @@ import './App.css';
 setupIonicReact();
 
 const App: React.FC = () => (
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/">
+        <Route exact path="/runningscreen">
           <RunningScreen />
+        </Route>
+        <Route exact path="/">
+          <FeedScreen />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
