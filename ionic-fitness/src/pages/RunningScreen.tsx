@@ -235,7 +235,7 @@ const RunningScreen: React.FC = () => {
 
   return (
     <>
-      <div style={{ position: 'relative', height: '80vh' }}>
+      <div style={{ position: 'relative', height: '90vh' }}>
         <div className='data-container'>
           <div className='data-row'>
             <div className='data-item'>
@@ -370,7 +370,7 @@ const RunningScreen: React.FC = () => {
               }}
               onClick={startTrackingRoute}
             >
-              Starti
+              Start
             </button>
           ) : (
             <button

@@ -1,8 +1,9 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact, } from '@ionic/react';
+import { IonApp, IonRouterOutlet, setupIonicReact, IonTabs, IonTabBar, IonTabButton, IonIcon, IonContent } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import RunningScreen from './pages/RunningScreen';
 import FeedScreen from './pages/FeedScreen';
+import { home, walk } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,14 +32,26 @@ const App: React.FC = () => (
 
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/runningscreen">
-          <RunningScreen />
-        </Route>
-        <Route exact path="/">
-          <FeedScreen />
-        </Route>
-      </IonRouterOutlet>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Route exact path="/runningscreen">
+            <RunningScreen />
+          </Route>
+          <Route exact path="/feedscreen">
+            <FeedScreen />
+          </Route>
+          <Route exact path="/" render={() => <Redirect to="/runningscreen" />} />
+        </IonRouterOutlet>
+
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="feed" href="/feedscreen">
+            <IonIcon icon={home} />
+          </IonTabButton>
+          <IonTabButton tab="running" href="/runningscreen">
+            <IonIcon icon={walk} />
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );
